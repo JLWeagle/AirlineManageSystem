@@ -1,0 +1,38 @@
+
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+}
+
+@media (min-width: 768px) {
+.bd-placeholder-img-lg {
+    font-size: 3.5rem;
+}
+}
+
+
+
+body{
+    background-color: #f4f4f4
+}
+
+.container{
+    margin-top: 100px
+}
+
+.logo{
+    margin: auto;
+    text-align: center
+}
+
+.subutton{
+    margin-top: 30px
+}
+
+.tip{
+    margin-top: 20px
+}
+
+p{
+    text-align: center
+}

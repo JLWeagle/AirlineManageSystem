@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/login_styles.css' %}">
+{% endblock %}
+{% block content %}
+
+  <div class="container">
+      <div class="logo">
+          <img class="mb-4" src="../../../static/css/signup.png" alt="" width="72" height="72">
+        </div>
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <p>已有账号？ <a href="{% url 'accounts:login' %}">请登录></a></p>
+        <form action="" method="post">
+          {% csrf_token %}
+          {% for field in form %}
+            <div class="form-group">
+              {{ field.errors }}
+              {{ field.label_tag }}
+              {{ field }}
+            </div>
+          {% endfor %}
+          <div class = "subutton">
+          <input type="submit" value="注 册" class='btn btn-primary btn-lg btn-block'>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
